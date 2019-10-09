@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Helloworld from './drills-1/Helloworld'
+import Helloworld from './drills-1/Helloworld';
+import bomb from './drills 2/bomb'
 
 ReactDOM.render(<Helloworld />, document.getElementById('root'));
 
