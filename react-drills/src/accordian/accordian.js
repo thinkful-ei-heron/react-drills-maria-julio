@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default class accordian extends React.Component {
+class accordian extends React.Component {
   static defaultProps = {
-    sections = [],
+    sections : [],
   };
   state = {
     currentSectionIndex: 0
@@ -12,18 +12,18 @@ export default class accordian extends React.Component {
     this.setState({ currentSectionIndex: index })
   }
   renderButtons() {
-      return this.this.props.sections.map((section, index) => (
+      return this.props.props.map((section, index) => (
         <button key={index} onClick={() => this.handleButtonClick(index)}>
-        {sections.title}
+        {section.title}
         </button>
       ))
   }
  
   renderContent() {
-    const currentSection = this.props.sections[this.state.currentSectionIndex]
+    const currentSection = this.props.props[this.state.currentSectionIndex]
     return (
         <li className='list'>
-            
+            {currentSection.content}
         </li>
     )
   }
@@ -38,8 +38,9 @@ export default class accordian extends React.Component {
             </div>
             )
     }
-    
-    
-    
+}
+
+export default {
+  accordian
 }
  
