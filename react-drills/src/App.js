@@ -11,11 +11,17 @@ const tabsProp = [
     content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
 ];
 
+const sbat = [
+  {
+    text: 'Hello World',
+  }
+]
+
 
 class App extends React.Component {
   render() {
     return <div>
-      <Tabs tabs={tabsProp} />
+      <Tabs tabs={tabsProp} sbat={sbat} />
     </div>
   }
 }

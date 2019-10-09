@@ -1,16 +1,17 @@
 import React from "react";
 
 export default class Tabs extends React.Component {
-    static defaultProps = {
+      static defaultProps = {
         tabs: [],
       };
       state = {
         currentTabIndex: 0
       };
       handleButtonClick(index) {
-        this.setState({ currentTabIndex: index })
+        this.setState({ currentTabIndex: index })  
       }
       renderButtons() {
+          console.log(this);
         return this.props.tabs.map((tab, index) => (
           <button key={index} onClick={() => this.handleButtonClick(index)}>
             {tab.name}
@@ -18,6 +19,7 @@ export default class Tabs extends React.Component {
         ))
       }
       renderContent() {
+          console.log(this.props.tabs[this.state.currentTabIndex]);
         const currentTab = this.props.tabs[this.state.currentTabIndex]
         return (
           <div className='content'>
